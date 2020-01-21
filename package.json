@@ -1,9 +1,9 @@
 {
 	"name": "merge-xlsx",
 	"displayName": "merge xlsx",
-	"description": "将两个xlsx文件根据第一列合并",
+	"description": "Combine two Excel files",
 	"publisher": "winnnntttter",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
