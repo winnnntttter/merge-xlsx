@@ -12,7 +12,9 @@ function activate(context) {
           prompt: "merge xlsx: Please enter the first xlsx or xls file name."
         })
         .then(function(text) {
-          if (!/\.xlsx|\.xls$/.test(text)) {
+          if (!text) {
+            return;
+          } else if (!/\.xlsx|\.xls$/.test(text)) {
             vscode.window.showErrorMessage("Please choose a xlsx or xls file!");
             return;
           }
@@ -27,6 +29,12 @@ function activate(context) {
                   prompt: "merge xlsx: Please enter the second xlsx or xls file name."
                 })
                 .then(function(text2) {
+                  if (!text2) {
+                    return;
+                  } else if (!/\.xlsx|\.xls$/.test(text2)) {
+                    vscode.window.showErrorMessage("Please choose a xlsx or xls file!");
+                    return;
+                  }
                   fs.stat(path.join(basePath, text), function(err, file) {
                     if (err) {
                       vscode.window.showErrorMessage(err.message);
