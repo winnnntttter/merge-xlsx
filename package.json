@@ -40,6 +40,6 @@
 		"vscode-test": "^1.2.2"
 	},
 	"dependencies": {
-		"xlsx": "^0.15.4"
+		"xlsx": "^0.17.0"
 	}
 }
